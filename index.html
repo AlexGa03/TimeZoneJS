@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Reloj</title>
+  </head>
+  <body onload="defTime()">
+    <header>
+      <h1>Reloj digital en javascript</h1>
+    </header>
+    <main>
+      <div class="col">
+        <canvas id="canvas" width="200" height="200"> </canvas>
+        <p id="date" class="date"></p>
+        <p id="hour" class="date"></p>
+      </div>
+      
+      <div id="options">
+        <label for="Dformat">
+          <h1>Formato de Fecha:</h1>
+        </label>
+        <div>
+          <input type="radio" name="Dformat" id="shortDate" value="shortDate" />
+          <label for="shortDate">DD/MM/YYYY</label>
+        </div>
+        <div>
+          <input type="radio" name="Dformat" id="LongDate" value="LongDate" />
+          <label for="shortDate">Dia-Mes-Año</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="Dformat"
+            id="LongDateSimp"
+            value="LongDateSimp"
+          />
+          <label for="shortDate">Dia-Mes-Año(Simplificado)</label>
+        </div>
+        <label for="Dtime">
+          <h1>Formato de hora:</h1>
+        </label>
+        <div>
+          <input type="radio" name="Dtime" id="AM" value="AM" />
+          <label for="shortDate">12H-AM/PM</label>
+        </div>
+        <div>
+          <input type="radio" name="Dtime" id="24" value="24" />
+          <label for="shortDate">24H</label>
+        </div>
+      </div>
+      <!-- <div id="map">
+        <div class="countries">
+          <div class="england"><input type="submit" name="country" value="Europe/London" onclick="setCountry(this.value)"></div>
+          <div class="spain"><input type="submit" name="country" value="Europe/Madrid" onclick="setCountry(this.value)"></div>
+          <div class="polinia"><input type="submit" name="country" value="Europe/Helsinki" onclick="setCountry(this.value)"></div>
+          <div class="rusia"><input type="submit" name="country" value="Europe/Moscow" onclick="setCountry(this.value)"></div>
+          <div class="virgin"><input type="submit" name="country" value="America/Virgin" onclick="setCountry(this.value)"></div>
+        </div>
+      </div> -->
+    </main>
+    <div class="wrap">
+      <img src="resources/world-map (1).gif"
+          usemap="#image-map">
+  
+      <map name="image-map">
+          <area id="Brazil/Acre" onclick="setCountry(this.id)" target="" alt="" href="#options" title="Brazil" coords="345,450,451,578" shape="rect">
+          <area id="Europe/Madrid" onclick="setCountry(this.id)" target="" alt="" href="#options" title="Madrid"  coords="551,317,30" shape="circle">
+          <area id="Europe/London" onclick="setCountry(this.id)" target="" alt="" href="#options" title="London"  coords="541,224,567,266" shape="rect">
+          <area id="Australia/Sydney" onclick="setCountry(this.id)" target="" alt="" href="#options" title="Sidney"  coords="1070,576,20" shape="circle">
+          <area id="America/New_York" onclick="setCountry(this.id)" target="" alt="" href="#options" title="New_York"  coords="322,306,10" shape="circle">
+          <area id="Europe/Helsinki" onclick="setCountry(this.id)" target="" alt="" href="#options" title="Helsinki"  coords="634,142,663,205" shape="rect">
+          
+      </map>
+      </div>
+    
+      
+    <footer>
+      <p>Alex Garcia @Copyright</p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
